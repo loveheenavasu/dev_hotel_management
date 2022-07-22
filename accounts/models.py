@@ -49,6 +49,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
     is_email_verified = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
+    is_general_manager = models.BooleanField(default=False)
     is_user = models.BooleanField(default=True)
     roles = models.ForeignKey(Role, on_delete=models.CASCADE, null=True, blank=True)
     created_at = models.DateTimeField(auto_created=True, auto_now=True)
@@ -74,3 +75,4 @@ class User(AbstractBaseUser, PermissionsMixin):
     EMAIL_FIELD = 'email'
     REQUIRED_FIELDS = []
     objects = UserManager()
+
