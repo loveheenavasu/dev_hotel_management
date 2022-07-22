@@ -1,4 +1,4 @@
-from api.models import *
+from main_app.models import *
 
 
 class Affiliate(models.Model):
