@@ -16,9 +16,9 @@ from pathlib import Path
 
 import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'main_app',
     'accounts',
+    'main_app',
     'orders',
     'rest_framework',
     'rest_framework_simplejwt',
@@ -157,16 +157,16 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
 
 django_heroku.settings(locals())
 
