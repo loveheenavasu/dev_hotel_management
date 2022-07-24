@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('auth', '0014_user_last_login'),
+        ('auth', '__latest__'),
     ]
 
     operations = [
