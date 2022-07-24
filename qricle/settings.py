@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'qricle.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Hotel_Pro',
+        'NAME': 'HotelPro',
         'USER': 'postgres',
         'PASSWORD': 'root',
         'HOST': 'localhost',
